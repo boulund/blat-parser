@@ -58,8 +58,7 @@ void custom_parse(string filename)
 
 void main(string[] args)
 {
-    //auto filename = "blat.blast8";
-    auto filename = "./QE_150828_46.blast8";
+    auto filename = "blat.blast8";
     custom_parse(filename);
 }
 
