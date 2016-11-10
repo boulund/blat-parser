@@ -3,14 +3,13 @@
 # Toying with groupby to parse blat output
 
 from itertools import groupby
-from string import split
 
 f = open("blat.blast8")
 
 
 for peptide, match_iter in groupby(f, lambda l: l.split()[0]):
     matches = []
-    for match in map(split, match_iter):
+    for match in map(str.split, match_iter):
         if float(match[2]) >= 90.0 and int(match[3]) >= 10:
             matches.append(tuple(match))
     if not matches:
