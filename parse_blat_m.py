@@ -23,4 +23,4 @@ for peptide, hitlist in hitlists.iteritems():
     filtered = [h for h in hitlist if float(h[1]) >= max_pid-max_pid_diff]
     if len(filtered)>0:
         pass
-        print peptide+":", len(filtered)
+        print(peptide+":", len(filtered))
