@@ -6,8 +6,7 @@ from itertools import imap
 from string import split
 from collections import defaultdict
 
-f = open("./QE_150828_46.blast8")
-#f = open("blat.blast8")
+f = open("blat.blast8")
 
 min_identity = 90.0
 min_matches = 10
