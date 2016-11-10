@@ -2,7 +2,6 @@
 # Fredrik Boulund 2015
 # Toying with groupby to parse blat output
 
-from string import split
 from collections import defaultdict
 
 f = open("blat.blast8")
@@ -12,7 +11,7 @@ min_matches = 10
 
 hitlists = defaultdict(list)
 
-for hit in imap(split, f):
+for hit in map(str.split, f):
     if float(hit[2]) >= min_identity and int(hit[3]) >= min_matches:
         hitlists[hit[0]].append(tuple(hit[1:]))
 
