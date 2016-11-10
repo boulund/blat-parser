@@ -10,5 +10,5 @@ pipelines:
     - step:
         script: # Modify the commands below to build your repository.
           - python --version
-          - python parse_blat.py
-          - python parse_blat_m.py
+          - time python parse_blat.py
+          - time python parse_blat_m.py
