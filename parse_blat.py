@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3.5
 # Fredrik Boulund 2015
 # Toying with groupby to parse blat output
 
@@ -21,4 +21,4 @@ for peptide, match_iter in groupby(f, lambda l: l.split()[0]):
     filtered = [h for h in matches if float(h[2]) >= (max_pid-max_pid_diff)]
     if len(filtered)>0:
         pass
-        print peptide+":", len(filtered)
+        print(peptide+":", len(filtered))
