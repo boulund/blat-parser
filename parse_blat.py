@@ -5,8 +5,7 @@
 from itertools import groupby, imap
 from string import split
 
-f = open("./QE_150828_46.blast8")
-#f = open("blat.blast8")
+f = open("blat.blast8")
 
 
 for peptide, match_iter in groupby(f, lambda l: l.split()[0]):
